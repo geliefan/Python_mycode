@@ -1,0 +1,21 @@
+<cybox:Observables 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2"
+	xmlns:EmailMessageObj="http://cybox.mitre.org/objects#EmailMessageObject-2"
+	xmlns:example="http://example.com/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd http://cybox.mitre.org/objects#AddressObject-2 http://cybox.mitre.org/XMLSchema/objects/Address/2.1/Address_Object.xsd http://cybox.mitre.org/objects#EmailMessageObject-2 http://cybox.mitre.org/XMLSchema/objects/Email_Message/2.1/Email_Message_Object.xsd" cybox_major_version="2" cybox_minor_version="1" cybox_update_version="0">
+    <cybox:Observable id="example:Observable-cacab78f-85bf-4b9d-8d27-9e6963fccbe4">
+        <cybox:Object id="example:EmailMessage-89ef2ad3-bc58-46f5-a1ac-d8adc237d7a3">
+            <cybox:Properties xsi:type="EmailMessageObj:EmailMessageObjectType">
+                <EmailMessageObj:Header>
+                    <EmailMessageObj:From xsi:type="AddressObj:AddressObjectType" category="e-mail">
+                        <AddressObj:Address_Value condition="Equals" apply_condition="ANY">attacker@example.com##comma##attacker1@example.com##comma##attacker@bad.example.com</AddressObj:Address_Value>
+                    </EmailMessageObj:From>
+                    <EmailMessageObj:Subject condition="Equals">New modifications to the specification</EmailMessageObj:Subject>
+                </EmailMessageObj:Header>
+            </cybox:Properties>
+        </cybox:Object>
+    </cybox:Observable>
+</cybox:Observables>
