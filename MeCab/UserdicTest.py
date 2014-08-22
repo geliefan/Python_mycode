@@ -3,11 +3,19 @@ import MeCab
 
 def extractKeyword(text):
     """textを形態素解析して、名詞のみのリストを返す"""
+<<<<<<< HEAD
     tagger = MeCab.Tagger(r'-u C:\pg\MeCab\dic\ntk_dic\user.dic')
     node = tagger.parseToNode(text.encode('utf-8'))
     keywords = []
     while node:
         if node.feature.split(",")[0] == r"名詞":
+=======
+    tagger = MeCab.Tagger(r'-u C:\Software\MeCab\dic\naistdic\user.dic')
+    node = tagger.parseToNode(text.encode('utf-8'))
+    keywords = []
+    while node:
+        if node.feature.split(",")[0] == r"動詞":
+>>>>>>> 5b30ba3a1abc5610314951914f4bc90325006f13
             keywords.append(node.surface.decode('utf-8'))
         node = node.next
     return keywords
