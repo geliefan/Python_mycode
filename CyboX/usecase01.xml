@@ -7,40 +7,40 @@
 	xmlns:example="http://example.com/"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd http://cybox.mitre.org/objects#DomainNameObject-1 http://cybox.mitre.org/XMLSchema/objects/Domain_Name/1.0/Domain_Name_Object.xsd http://cybox.mitre.org/objects#FileObject-2 http://cybox.mitre.org/XMLSchema/objects/File/2.1/File_Object.xsd" cybox_major_version="2" cybox_minor_version="1" cybox_update_version="0">
-    <cybox:Observable id="example:Observable-7601eb2b-dd11-495f-95b1-4530aa9bb93e">
+    <cybox:Observable id="example:Observable-915a20f0-e67e-41c9-aa54-d6e2f7a2417d">
         <cybox:Description>インターネットエクスプローラー</cybox:Description>
-        <cybox:Object id="example:File-2c9e23f1-391f-4b6b-beea-f76a9f24df2c">
+        <cybox:Object id="example:File-979ccb1e-43a9-4b2e-af7c-2d6068b6320c">
             <cybox:Properties xsi:type="FileObj:FileObjectType">
                 <FileObj:File_Name>iexplore.exe</FileObj:File_Name>
                 <FileObj:File_Path>C:\Program Files\Internet Explorer</FileObj:File_Path>
             </cybox:Properties>
         </cybox:Object>
     </cybox:Observable>
-    <cybox:Observable id="example:Observable-95e15ae4-ae81-49f4-b9ea-dc0a4c2f339a">
+    <cybox:Observable id="example:Observable-c3883bc4-8c4c-4191-99af-cdcaec0b9a89">
         <cybox:Description>サイトドメイン</cybox:Description>
-        <cybox:Object id="example:DomainName-39b4f96a-5917-484f-8aa5-90f2ec3c24b4">
+        <cybox:Object id="example:DomainName-329c852c-78d1-417e-ad29-8472dd1ab7a8">
             <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
                 <DomainNameObj:Value>hogehoge.ccom</DomainNameObj:Value>
             </cybox:Properties>
         </cybox:Object>
     </cybox:Observable>
-    <cybox:Observable id="example:Observable-1766e555-e5ae-4b2b-9107-0a0f0e4d3ce4">
+    <cybox:Observable id="example:Observable-12a33951-233f-41ea-8681-15549a88b397">
         <cybox:Description>マルウェアファイル</cybox:Description>
-        <cybox:Object id="example:File-71cde6c6-cea5-49f9-9a81-fd0afd9f0e39">
+        <cybox:Object id="example:File-61be0e4f-82bf-426e-8f8e-bf9c59326fbb">
             <cybox:Properties xsi:type="FileObj:FileObjectType">
                 <FileObj:File_Name>malware.exe</FileObj:File_Name>
             </cybox:Properties>
         </cybox:Object>
     </cybox:Observable>
-    <cybox:Observable id="example:Observable-be6588e0-cfc7-4d79-a57d-8af8e02dea05">
+    <cybox:Observable id="example:Observable-5b5b3213-5989-467b-b2da-1038b470dbcf">
         <cybox:Event>
             <cybox:Description>IEの表示とコードの実行</cybox:Description>
             <cybox:Actions>
                 <cybox:Action>
                     <cybox:Type xsi:type="cyboxVocabs:ActionTypeVocab-1.0">Connect</cybox:Type>
-                    <cybox:Name xsi:type="cyboxVocabs:ActionNameVocab-1.0">Connnect to URL</cybox:Name>
+                    <cybox:Name xsi:type="cyboxVocabs:ActionNameVocab-1.1">Connnect to URL</cybox:Name>
                     <cybox:Associated_Objects>
-                        <cybox:Associated_Object id="example:File-2c9e23f1-391f-4b6b-beea-f76a9f24df2c">
+                        <cybox:Associated_Object id="example:File-979ccb1e-43a9-4b2e-af7c-2d6068b6320c">
                             <cybox:Properties xsi:type="FileObj:FileObjectType">
                                 <FileObj:File_Name>iexplore.exe</FileObj:File_Name>
                                 <FileObj:File_Path>C:\Program Files\Internet Explorer</FileObj:File_Path>
@@ -51,7 +51,7 @@
                 <cybox:Action>
                     <cybox:Type xsi:type="cyboxVocabs:ActionTypeVocab-1.0">Execute</cybox:Type>
                     <cybox:Associated_Objects>
-                        <cybox:Associated_Object id="example:File-71cde6c6-cea5-49f9-9a81-fd0afd9f0e39">
+                        <cybox:Associated_Object id="example:File-61be0e4f-82bf-426e-8f8e-bf9c59326fbb">
                             <cybox:Properties xsi:type="FileObj:FileObjectType">
                                 <FileObj:File_Name>malware.exe</FileObj:File_Name>
                             </cybox:Properties>

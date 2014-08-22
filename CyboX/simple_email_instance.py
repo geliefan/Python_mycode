@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# -*- coding: cp932 -*-
+# -*- coding: utf-8 -*-
 
 # Copyright (c) 2014, The MITRE Corporation. All rights reserved.
 # See LICENSE.txt for complete terms.
@@ -17,17 +17,17 @@ def main():
     NS = cybox.utils.Namespace("http://example.com/", "example")
     cybox.utils.set_id_namespace(NS)
 
-    # ƒIƒuƒWƒFƒNƒg‚Ìì¬iEmailMesage)
+    # ï¿½Iï¿½uï¿½Wï¿½Fï¿½Nï¿½gï¿½Ìì¬ï¿½iEmailMesage)
     m = EmailMessage()
-    # ƒIƒuƒWƒFƒNƒg‚ÉŠÖ˜A•t‚¯
+    # ï¿½Iï¿½uï¿½Wï¿½Fï¿½Nï¿½gï¿½ÉŠÖ˜Aï¿½tï¿½ï¿½
     m.to = ["victim1@target.com", "victim2@target.com"]
     m.from_ = "attacker@example.com"
     m.subject = "New modifications to the specification"
 
-    # ƒIƒuƒWƒFƒNƒg‚Ìì¬iAdress)
+    # ï¿½Iï¿½uï¿½Wï¿½Fï¿½Nï¿½gï¿½Ìì¬ï¿½iAdress)
     a = Address("192.168.1.1", Address.CAT_IPV4)
 
-    # ƒIƒuƒWƒFƒNƒgŠÔ‚ÌŠÖ˜A
+    # ï¿½Iï¿½uï¿½Wï¿½Fï¿½Nï¿½gï¿½Ô‚ÌŠÖ˜A
     m.add_related(a, "Received_From", inline=False)
     a.add_related(m, "Received_to", inline=False)
 
