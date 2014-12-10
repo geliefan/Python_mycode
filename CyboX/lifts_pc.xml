@@ -1,0 +1,18 @@
+<cybox:Observables 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2"
+	xmlns:lift_s="http://example.com/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd http://cybox.mitre.org/objects#FileObject-2 http://cybox.mitre.org/XMLSchema/objects/File/2.1/File_Object.xsd" cybox_major_version="2" cybox_minor_version="1" cybox_update_version="0">
+    <cybox:Observable id="lift_s:Observable-19f1c3ba-70f9-4957-920a-64f3f18ec4fc">
+        <cybox:Description>マルウェア情報</cybox:Description>
+        <cybox:Object id="lift_s:File-c5b6f941-07e2-4436-9a0e-8034fb410852">
+            <cybox:Properties xsi:type="FileObj:FileObjectType">
+                <FileObj:File_Name>ADD_0.png</FileObj:File_Name>
+                <FileObj:File_Path>C:\RDFsample\ADD_0</FileObj:File_Path>
+                <FileObj:File_Extension>.png</FileObj:File_Extension>
+            </cybox:Properties>
+        </cybox:Object>
+    </cybox:Observable>
+</cybox:Observables>

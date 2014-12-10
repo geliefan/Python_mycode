@@ -31,12 +31,11 @@ def main():
     IE.file_path = r"C:\Program Files\Internet Explorer"
     IE.file_extenstion = '.exe'
 
-    '''
     #オブジェクト：コード ＊未実装のため表記できず
     code = Code()
     code.desctiption = "攻撃コード"
     code.language = "JavaScript"
-    '''
+
     #サイトドメイン
     domain = DomainName()
     domain.value  = "hogehoge.ccom"
@@ -67,6 +66,7 @@ def main():
     #実行
     ae = action.Action()
     ae.type_ = "Execute"
+    ae.name = "Open File"
     ae.desctiption = "Execute malware code"
     ae.associated_objects = aos2
 
@@ -91,7 +91,7 @@ def main():
     xml = open("usecase01.xml","w")
     xml.write(OB.to_xml())
     xml.close()
-    print OB.to_xml()
+    print OB.to_xml(include_namespaces = False)
 
 if __name__=='__main__':
     main()

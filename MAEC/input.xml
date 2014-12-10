@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<stix:STIX_Package
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:stix="http://stix.mitre.org/stix-1"
+xmlns:stixCommon="http://stix.mitre.org/common-1"
+xmlns:cybox="http://cybox.mitre.org/cybox-2"
+xmlns:EmailMessageObj="http://cybox.mitre.org/objects#EmailMessageObject-2"
+xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2"
+xsi:schemaLocation="
+http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.1.1/stix_core.xsd
+http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.1.1/stix_common.xsd
+http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+http://cybox.mitre.org/objects#EmailMessageObject-2 http://cybox.mitre.org/XMLSchema/objects/Email_Message/2.1/Email_Message_Object.xsd
+http://cybox.mitre.org/objects#AddressObject-2 http://cybox.mitre.org/XMLSchema/objects/Address/2.1/Address_Object.xsd
+"
+version="1.1.1"
+xmlns:example_namespace="example_namespace/">
+
+
+    <stix:Observables cybox_major_version="2" cybox_minor_version="1" cybox_update_version="0">
+    <cybox:Observable id="example_namespace:Observable-1d2e49f1-1fef-4dd6-b8d2-cdad9e538039">
+      <cybox:Title>Email</cybox:Title>
+      <cybox:Description>Email Description</cybox:Description>
+      <cybox:Object id="example_namespace:Object-98cdb2c0-d8e8-4a5b-adee-8255af99a893">
+        <cybox:Properties xsi:type="EmailMessageObj:EmailMessageObjectType">
+          <EmailMessageObj:Header>
+            <EmailMessageObj:Sender>
+                <AddressObj:Address_Value condition="Equals" is_case_sensitive="false" apply_condition="ANY" delimiter="##example_namespace##">sender</AddressObj:Address_Value>
+            </EmailMessageObj:Sender>
+          </EmailMessageObj:Header>
+        </cybox:Properties>
+      </cybox:Object>
+    </cybox:Observable>
+  </stix:Observables>
+
+</stix:STIX_Package>
