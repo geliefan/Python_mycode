@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import sys
 import cybox.bindings.cybox_core as cybox_core_binding
-from cybox.core import Observable, Observables, action, AssociatedObject, action_reference,event,object
+from cybox.core import *
 import cybox.utils
 #file:FileObject
 from cybox.objects.file_object import File,FilePath
@@ -78,7 +78,10 @@ def main():
     e.actions = aa
 
     #Observableにセット
-    o1 = Observable(IE)
+    obb1 = Object(IE,domain)
+    obb2 = Object(domain)
+    lss = [obb1,obb2]
+    o1 = Observable(obb1)
     o1.description = u"インターネットエクスプローラー"
     o2 = Observable(domain)
     o2.description = u"サイトドメイン"
