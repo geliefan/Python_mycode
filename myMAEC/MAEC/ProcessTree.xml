@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<maecBundle:ProcessTreeType 
+	xmlns:LIFT-S="http://LIFT-S.com/"
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:ProcessObj="http://cybox.mitre.org/objects#ProcessObject-2"
+	xmlns:maecBundle="http://maec.mitre.org/XMLSchema/maec-bundle-4"
+	xmlns:maecVocabs="http://maec.mitre.org/default_vocabularies-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd http://cybox.mitre.org/objects#ProcessObject-2 http://cybox.mitre.org/XMLSchema/objects/Process/2.1/Process_Object.xsd http://maec.mitre.org/XMLSchema/maec-bundle-4 http://maec.mitre.org/language/version4.1/maec_bundle_schema.xsd http://maec.mitre.org/default_vocabularies-1 http://maec.mitre.org/language/version4.1/maec_default_vocabularies.xsd">
+    <maecBundle:Root_Process xsi:type="maecBundle:ProcessTreeNodeType" id="example:process_tree-3c5cc9d5-6208-4aff-87e0-e09bdc45d371">
+        <ProcessObj:PID>3408</ProcessObj:PID>
+        <ProcessObj:Name>word.exe</ProcessObj:Name>
+        <maecBundle:Initiated_Actions>
+            <maecBundle:Action_Reference action_id="example:action-0be1a843-7913-42d3-a153-e3aa811b2065"/>
+        </maecBundle:Initiated_Actions>
+        <maecBundle:Spawned_Process xsi:type="maecBundle:ProcessTreeNodeType" id="example:process_tree-4f8b39b0-b45e-46a3-87b8-e8e313add9b4">
+            <ProcessObj:PID>3768</ProcessObj:PID>
+            <ProcessObj:Name>SenPen.exe</ProcessObj:Name>
+            <ProcessObj:Parent_PID>3408</ProcessObj:Parent_PID>
+        </maecBundle:Spawned_Process>
+    </maecBundle:Root_Process>
+</maecBundle:ProcessTreeType>

@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<maecPackage:MAEC_Package 
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2"
+	xmlns:ProcessObj="http://cybox.mitre.org/objects#ProcessObject-2"
+	xmlns:example="http://example.com/" 
+	xmlns:maecPackage="http://maec.mitre.org/XMLSchema/maec-package-2"
+	xmlns:maecVocabs="http://maec.mitre.org/default_vocabularies-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd http://cybox.mitre.org/objects#FileObject-2 http://cybox.mitre.org/XMLSchema/objects/File/2.1/File_Object.xsd http://cybox.mitre.org/objects#ProcessObject-2 http://cybox.mitre.org/XMLSchema/objects/Process/2.1/Process_Object.xsd http://maec.mitre.org/XMLSchema/maec-bundle-4 http://maec.mitre.org/language/version4.1/maec_bundle_schema.xsd http://maec.mitre.org/XMLSchema/maec-package-2 http://maec.mitre.org/language/version4.1/maec_package_schema.xsd http://maec.mitre.org/default_vocabularies-1 http://maec.mitre.org/language/version4.1/maec_default_vocabularies.xsd" id="example:package-91f6c90f-5271-4d3c-9ad9-2436042d3e25" schema_version="2.1">
+    <maecPackage:Malware_Subjects>
+        <maecPackage:Malware_Subject id="example:malware_subject-b1dbbf0d-b504-4196-a20c-ea2d30550d9a">
+            <maecPackage:Malware_Instance_Object_Attributes id="example:Object-2ee9bc3f-7d36-4fde-9c61-df410bbfce0b">
+                <cybox:Properties xsi:type="FileObj:FileObjectType">
+                    <FileObj:File_Name>seminor.doc</FileObj:File_Name>
+                    <FileObj:Size_In_Bytes>154173</FileObj:Size_In_Bytes>
+                    <FileObj:Hashes>
+                        <cyboxCommon:Hash>
+                            <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                            <cyboxCommon:Simple_Hash_Value>54CC941747FA99A3521314B9969D4964</cyboxCommon:Simple_Hash_Value>
+                        </cyboxCommon:Hash>
+                    </FileObj:Hashes>
+                </cybox:Properties>
+            </maecPackage:Malware_Instance_Object_Attributes>
+            <maecPackage:Findings_Bundles>
+                <maecPackage:Bundle defined_subject="false" id="example:bundle-e008d2bf-53ec-4e4b-9576-07d9e56046c5" schema_version="4.1">
+                    <maecBundle:Process_Tree>
+                        <maecBundle:Root_Process xsi:type="maecBundle:ProcessTreeNodeType" id="&lt;maec.bindings.maec_bundle.ProcessTreeType object at 0x03769610&gt;">
+                        </maecBundle:Root_Process>
+                    </maecBundle:Process_Tree>
+                    <maecBundle:Actions>
+                        <maecBundle:Action action_status="success" id="example:action-9604985f-c181-41ba-a663-e625689b8612">
+                            <cybox:Name xsi:type="maecVocabs:FileActionNameVocab-1.0">create file</cybox:Name>
+                            <cybox:Associated_Objects>
+                                <cybox:Associated_Object id="example:Object-069802fe-0e39-470c-9fb9-319ea5935343">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:File_Name>SenpEn.exe</FileObj:File_Name>
+                                        <FileObj:File_Path>C:\Document and settings\user\application data\Common Files\SenpEn.exe</FileObj:File_Path>
+                                        <FileObj:Size_In_Bytes>3768</FileObj:Size_In_Bytes>
+                                    </cybox:Properties>
+                                    <cybox:Association_Type xsi:type="maecVocabs:ActionObjectAssociationTypeVocab-1.0">output</cybox:Association_Type>
+                                </cybox:Associated_Object>
+                                <cybox:Associated_Object id="example:Object-9cec6a01-8948-4637-be3b-262eb252c730">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:File_Name>word.exe</FileObj:File_Name>
+                                        <FileObj:File_Path>C:\Program Files\Microsoft Office\Office12\WINWORD.EXE</FileObj:File_Path>
+                                        <FileObj:Size_In_Bytes>3408</FileObj:Size_In_Bytes>
+                                    </cybox:Properties>
+                                    <cybox:Association_Type xsi:type="maecVocabs:ActionObjectAssociationTypeVocab-1.0">output</cybox:Association_Type>
+                                </cybox:Associated_Object>
+                                <cybox:Associated_Object id="example:Object-acadc743-6384-4561-bc9c-2e85968914d5">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:File_Name>wcntfy.exe</FileObj:File_Name>
+                                        <FileObj:File_Path>C:\Documents and Settings\user\wcntfy.exe</FileObj:File_Path>
+                                        <FileObj:Size_In_Bytes>628</FileObj:Size_In_Bytes>
+                                    </cybox:Properties>
+                                    <cybox:Association_Type xsi:type="maecVocabs:ActionObjectAssociationTypeVocab-1.0">output</cybox:Association_Type>
+                                </cybox:Associated_Object>
+                                <cybox:Associated_Object id="example:Object-ed73c864-1959-4b5e-be49-5b43a07dac18">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:File_Name>svchost.exe</FileObj:File_Name>
+                                        <FileObj:File_Path>C:\DOCUME~1\user\LOCALS~1\Temp\svchost.exe</FileObj:File_Path>
+                                        <FileObj:Size_In_Bytes>2224</FileObj:Size_In_Bytes>
+                                    </cybox:Properties>
+                                    <cybox:Association_Type xsi:type="maecVocabs:ActionObjectAssociationTypeVocab-1.0">output</cybox:Association_Type>
+                                </cybox:Associated_Object>
+                                <cybox:Associated_Object id="example:Object-18e05216-7ba2-4124-a4b4-dd3bae19b6fd">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:File_Name>IEXPLORE.exe</FileObj:File_Name>
+                                        <FileObj:File_Path>C:\Program Files\Internet Explorer\IEXPLORE.EXE</FileObj:File_Path>
+                                        <FileObj:Size_In_Bytes>3764</FileObj:Size_In_Bytes>
+                                    </cybox:Properties>
+                                    <cybox:Association_Type xsi:type="maecVocabs:ActionObjectAssociationTypeVocab-1.0">output</cybox:Association_Type>
+                                </cybox:Associated_Object>
+                            </cybox:Associated_Objects>
+                        </maecBundle:Action>
+                    </maecBundle:Actions>
+                </maecPackage:Bundle>
+            </maecPackage:Findings_Bundles>
+        </maecPackage:Malware_Subject>
+    </maecPackage:Malware_Subjects>
+</maecPackage:MAEC_Package>

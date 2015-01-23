@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<maecPackage:MAEC_Package 
+	xmlns:LIFT-S="http://LIFT-S.com/"
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2"
+	xmlns:ProcessObj="http://cybox.mitre.org/objects#ProcessObject-2"
+	xmlns:maecBundle="http://maec.mitre.org/XMLSchema/maec-bundle-4"
+	xmlns:maecPackage="http://maec.mitre.org/XMLSchema/maec-package-2"
+	xmlns:maecVocabs="http://maec.mitre.org/default_vocabularies-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd http://cybox.mitre.org/objects#FileObject-2 http://cybox.mitre.org/XMLSchema/objects/File/2.1/File_Object.xsd http://cybox.mitre.org/objects#ProcessObject-2 http://cybox.mitre.org/XMLSchema/objects/Process/2.1/Process_Object.xsd http://maec.mitre.org/XMLSchema/maec-bundle-4 http://maec.mitre.org/language/version4.1/maec_bundle_schema.xsd http://maec.mitre.org/XMLSchema/maec-package-2 http://maec.mitre.org/language/version4.1/maec_package_schema.xsd http://maec.mitre.org/default_vocabularies-1 http://maec.mitre.org/language/version4.1/maec_default_vocabularies.xsd" id="example:package-783d86b2-9d19-4468-97d1-75871c2ffd0d" schema_version="2.1">
+    <maecPackage:Malware_Subjects>
+        <maecPackage:Malware_Subject id="example:malware_subject-ebf1222d-df40-4b0d-b243-5750e0be142f">
+            <maecPackage:Malware_Instance_Object_Attributes id="example:Object-18c8e0eb-3054-4b21-9f85-ade28519be66">
+                <cybox:Properties xsi:type="FileObj:FileObjectType">
+                    <FileObj:File_Name>seminor.doc</FileObj:File_Name>
+                    <FileObj:Size_In_Bytes>154173</FileObj:Size_In_Bytes>
+                    <FileObj:Hashes>
+                        <cyboxCommon:Hash>
+                            <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                            <cyboxCommon:Simple_Hash_Value>54CC941747FA99A3521314B9969D4964</cyboxCommon:Simple_Hash_Value>
+                        </cyboxCommon:Hash>
+                    </FileObj:Hashes>
+                </cybox:Properties>
+            </maecPackage:Malware_Instance_Object_Attributes>
+            <maecPackage:Analyses>
+                <maecPackage:Analysis method="dynamic" type="triage" id="example:analysis-c74faa14-e810-4751-8b09-2dcc7a0c5b51">
+                    <maecPackage:Findings_Bundle_Reference bundle_idref="example:bundle-6da5d2a7-3232-4614-aceb-1e7b5f79e583"/>
+                    <maecPackage:Tools>
+                        <maecPackage:Tool>
+                            <cyboxCommon:Name>APIMonitor</cyboxCommon:Name>
+                            <cyboxCommon:Vendor>APIMonitor</cyboxCommon:Vendor>
+                        </maecPackage:Tool>
+                    </maecPackage:Tools>
+                </maecPackage:Analysis>
+            </maecPackage:Analyses>
+            <maecPackage:Findings_Bundles>
+                <maecPackage:Bundle defined_subject="false" id="example:bundle-6da5d2a7-3232-4614-aceb-1e7b5f79e583" schema_version="4.1">
+                    <maecBundle:Process_Tree>
+                        <maecBundle:Root_Process xsi:type="maecBundle:ProcessTreeNodeType" id="example:process_tree-c7ab28f7-209a-430b-bba1-50cbc651ab5e">
+                            <ProcessObj:PID>3408</ProcessObj:PID>
+                            <ProcessObj:Name>word.exe</ProcessObj:Name>
+                            <maecBundle:Initiated_Actions>
+                                <maecBundle:Action_Reference action_id="example:action-168fd262-140b-402c-b265-20957f815e69"/>
+                            </maecBundle:Initiated_Actions>
+                            <maecBundle:Spawned_Process xsi:type="maecBundle:ProcessTreeNodeType" id="example:process_tree-bf1a2fa7-acea-4e43-854c-84670ce5659f">
+                                <ProcessObj:PID>3768</ProcessObj:PID>
+                                <ProcessObj:Name>SenPen.exe</ProcessObj:Name>
+                                <ProcessObj:Parent_PID>3408</ProcessObj:Parent_PID>
+                            </maecBundle:Spawned_Process>
+                        </maecBundle:Root_Process>
+                    </maecBundle:Process_Tree>
+                    <maecBundle:Actions>
+                        <maecBundle:Action id="example:action-168fd262-140b-402c-b265-20957f815e69">
+                            <cybox:Name xsi:type="FileActionNameVocab-1.1">create file</cybox:Name>
+                            <cybox:Associated_Objects>
+                                <cybox:Associated_Object id="example:Object-528433d2-8744-4307-8509-b3c4727b2370">
+                                    <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                        <FileObj:File_Name>SenpEn.exe</FileObj:File_Name>
+                                        <FileObj:File_Path>C:\Document and settings\user\application data\Common Files\SenpEn.exe</FileObj:File_Path>
+                                        <FileObj:Size_In_Bytes>3768</FileObj:Size_In_Bytes>
+                                    </cybox:Properties>
+                                    <cybox:Association_Type xsi:type="maecVocabs:ActionObjectAssociationTypeVocab-1.0">output</cybox:Association_Type>
+                                </cybox:Associated_Object>
+                            </cybox:Associated_Objects>
+                        </maecBundle:Action>
+                    </maecBundle:Actions>
+                </maecPackage:Bundle>
+            </maecPackage:Findings_Bundles>
+        </maecPackage:Malware_Subject>
+    </maecPackage:Malware_Subjects>
+</maecPackage:MAEC_Package>
