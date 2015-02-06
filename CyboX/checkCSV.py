@@ -6,22 +6,29 @@ Created on 2015/01/17
 CSV Line Errorが生じたので，NULLが含まれていないかチェック
 '''
 
+import codecs
+import csv
+
 def checks(filepath):
     print repr(open(filepath, 'rb').read(200)) # dump 1st 200 bytes of file
     data = open(filepath, 'rb').read()
-    print data.find('\x00')
-    print data.count('\x00')
+    print data.find('\xfea')
+    print data.count('\xfea')
 
 def fixCVS(filepath):
     fi = open(filepath, 'rb')
     data = fi.read()
     fi.close()
-    fo = open('fixedCVS.csv', 'wb')
+    fo = open('fixedCVS_ver02.log', 'wb')
     fo.write(data.replace('\x00', ''))
     fo.close()
     
 if __name__ == '__main__':
-    filepath = r'C:\WORK\MalList\Output\ShinoBOT\-K-W7X64A-192.168.12.56-2015-01-10.log'
+    filepath = r'sample.log'
     #checks(filepath)
-    fixCVS(filepath)
+    #fixCVS(filepath)
+    f = open('sample.log', 'rb').read()
+    bom= codecs.BOM_UTF16_LE
+    assert(f[:len(bom)]==bom)
+    print f[len(bom):].decode('utf-16le')
     

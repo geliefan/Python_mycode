@@ -14,7 +14,7 @@ from cybox.objects.process_object import *
 from cybox.objects.domain_name_object import DomainName
 from cybox.objects.network_socket_object import *
 from cybox.objects.win_process_object import *
-#code:CodeObject 未実装？
+
 from cybox.objects.code_object import Code
 from Recoder import *
 #debug
@@ -31,7 +31,6 @@ def cap2cybox(row):
   for d in range(7):
       dates += row[d]+"-"
   dd = datetime.strptime(dates,'%Y-%m-%d-%H-%M-%S-%f-')
-
   
   if row[7] == "PROCESS_QUIT":
     #read 8
@@ -91,11 +90,11 @@ def cap2cybox(row):
     OBs = Observable()
     OBs.event = e
     #OBs.object_= Object(PM)
-    OB_F = Object(F)
+    #OB_F = Object(F)
     #OB_P.add_related(F,"Loaded_into","tes2")
     #OB_F.add_related(PM,"Loaded_From","tes4") #Object作成が必要が検討が必要
     OB.add(OBs)
-    OB.add(OB_F)
+    #OB.add(OB_F)
     
   elif row[7] == "PROCESS_LAUNCH":
     #read 8,9,10,11
@@ -104,10 +103,10 @@ def cap2cybox(row):
     PL.parent_pid = int(row[9]) #実行時は必ずPPIDは存在する？
     PL.start_time = dd
     #WPOB = WinProcess(PL)
-    OB_P = Object(PL)
+    #OB_P = Object(PL)
     F = File()
     F.file_path = row[10]
-    OB.add(OB_P)
+    #OB.add(OB_P)
     '''
          アクションの記述
     '''
@@ -134,9 +133,9 @@ def cap2cybox(row):
     e.type_ = "Process Mgt"
     OBs = Observable()
     OBs.event = e
-    OB_F = Object(F)
+    #OB_F = Object(F)
     OB.add(OBs)
-    OB.add(OB_F)
+    #OB.add(OB_F)
 
   elif row[7] == "NETWORKV4":
     #read 8,12,13,14,15,16
@@ -243,11 +242,11 @@ def cap2cybox(row):
 
 
 if __name__ == '__main__':
-    #with codecs.open(r'C:\WORK\MalList\Output\ShinoBOT\-K-W7X64A-192.168.12.56-2015-01-10.log', encoding="utf-8") as f:
-    with open("fixedCVS.csv",'rb') as f:
-        sr = Recoder(f, 'utf-16', 'utf-8')
+    with codecs.open(r'sample.log', 'r',encoding="utf-16le") as f:
+    #with open("sample.log",'rb') as f:
+        #sr = Recoder(f, 'utf-16', 'utf-8')
         sr = f
-        xml = open("CapLogger.xml","w")
+        xml = open("shinoBOT_ver02.xml","w")
         for row in csv.reader(sr):
             cap2cybox(row)
 
