@@ -39,7 +39,7 @@ from maec.package import malware_subject
 def parse(xml_file):
     obs_obj = cybox_core_binding.parse(xml_file) # create binding object from xml file
     obs = Observables.from_obj(obs_obj) # convert binding object into python-cybox object
-    #pro = process_binding.(xml_file)
+    #pro = process_binding.parse(xml_file)
     #p = Process.from_obj(pro)
     #print p.pid    
     return obs

@@ -10,10 +10,10 @@
 	xmlns:maecPackage="http://maec.mitre.org/XMLSchema/maec-package-2"
 	xmlns:maecVocabs="http://maec.mitre.org/default_vocabularies-1"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd http://cybox.mitre.org/objects#FileObject-2 http://cybox.mitre.org/XMLSchema/objects/File/2.1/File_Object.xsd http://cybox.mitre.org/objects#ProcessObject-2 http://cybox.mitre.org/XMLSchema/objects/Process/2.1/Process_Object.xsd http://maec.mitre.org/XMLSchema/maec-bundle-4 http://maec.mitre.org/language/version4.1/maec_bundle_schema.xsd http://maec.mitre.org/XMLSchema/maec-package-2 http://maec.mitre.org/language/version4.1/maec_package_schema.xsd http://maec.mitre.org/default_vocabularies-1 http://maec.mitre.org/language/version4.1/maec_default_vocabularies.xsd" id="example:package-783d86b2-9d19-4468-97d1-75871c2ffd0d" schema_version="2.1">
+	xsi:schemaLocation="http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd http://cybox.mitre.org/objects#FileObject-2 http://cybox.mitre.org/XMLSchema/objects/File/2.1/File_Object.xsd http://cybox.mitre.org/objects#ProcessObject-2 http://cybox.mitre.org/XMLSchema/objects/Process/2.1/Process_Object.xsd http://maec.mitre.org/XMLSchema/maec-bundle-4 http://maec.mitre.org/language/version4.1/maec_bundle_schema.xsd http://maec.mitre.org/XMLSchema/maec-package-2 http://maec.mitre.org/language/version4.1/maec_package_schema.xsd http://maec.mitre.org/default_vocabularies-1 http://maec.mitre.org/language/version4.1/maec_default_vocabularies.xsd" id="example:package-42f4a884-1484-4982-a636-236c979edf41" schema_version="2.1">
     <maecPackage:Malware_Subjects>
-        <maecPackage:Malware_Subject id="example:malware_subject-ebf1222d-df40-4b0d-b243-5750e0be142f">
-            <maecPackage:Malware_Instance_Object_Attributes id="example:Object-18c8e0eb-3054-4b21-9f85-ade28519be66">
+        <maecPackage:Malware_Subject id="example:malware_subject-91cacfd6-2606-48d5-a6f6-4855cdcfb5c6">
+            <maecPackage:Malware_Instance_Object_Attributes id="example:Object-0991e5ec-367d-40ca-9334-8714492efb26">
                 <cybox:Properties xsi:type="FileObj:FileObjectType">
                     <FileObj:File_Name>seminor.doc</FileObj:File_Name>
                     <FileObj:Size_In_Bytes>154173</FileObj:Size_In_Bytes>
@@ -26,8 +26,8 @@
                 </cybox:Properties>
             </maecPackage:Malware_Instance_Object_Attributes>
             <maecPackage:Analyses>
-                <maecPackage:Analysis method="dynamic" type="triage" id="example:analysis-c74faa14-e810-4751-8b09-2dcc7a0c5b51">
-                    <maecPackage:Findings_Bundle_Reference bundle_idref="example:bundle-6da5d2a7-3232-4614-aceb-1e7b5f79e583"/>
+                <maecPackage:Analysis method="dynamic" type="triage" id="example:analysis-06520bf6-c70c-4b1b-9101-9a3703bb8f02">
+                    <maecPackage:Findings_Bundle_Reference bundle_idref="example:bundle-381e48f5-7ad1-4cd8-a201-f80d90d5d520"/>
                     <maecPackage:Tools>
                         <maecPackage:Tool>
                             <cyboxCommon:Name>APIMonitor</cyboxCommon:Name>
@@ -37,15 +37,15 @@
                 </maecPackage:Analysis>
             </maecPackage:Analyses>
             <maecPackage:Findings_Bundles>
-                <maecPackage:Bundle defined_subject="false" id="example:bundle-6da5d2a7-3232-4614-aceb-1e7b5f79e583" schema_version="4.1">
+                <maecPackage:Bundle defined_subject="false" id="example:bundle-381e48f5-7ad1-4cd8-a201-f80d90d5d520" schema_version="4.1">
                     <maecBundle:Process_Tree>
-                        <maecBundle:Root_Process xsi:type="maecBundle:ProcessTreeNodeType" id="example:process_tree-c7ab28f7-209a-430b-bba1-50cbc651ab5e">
+                        <maecBundle:Root_Process xsi:type="maecBundle:ProcessTreeNodeType" id="example:process_tree-42a98053-6758-4e8d-bcab-7b3cb8f9895d">
                             <ProcessObj:PID>3408</ProcessObj:PID>
                             <ProcessObj:Name>word.exe</ProcessObj:Name>
                             <maecBundle:Initiated_Actions>
-                                <maecBundle:Action_Reference action_id="example:action-168fd262-140b-402c-b265-20957f815e69"/>
+                                <maecBundle:Action_Reference action_id="example:action-a89db65d-fe80-4b91-85ab-a793af0c5487"/>
                             </maecBundle:Initiated_Actions>
-                            <maecBundle:Spawned_Process xsi:type="maecBundle:ProcessTreeNodeType" id="example:process_tree-bf1a2fa7-acea-4e43-854c-84670ce5659f">
+                            <maecBundle:Spawned_Process xsi:type="maecBundle:ProcessTreeNodeType" id="example:process_tree-d363b036-e767-452f-9bee-7c79c4050537">
                                 <ProcessObj:PID>3768</ProcessObj:PID>
                                 <ProcessObj:Name>SenPen.exe</ProcessObj:Name>
                                 <ProcessObj:Parent_PID>3408</ProcessObj:Parent_PID>
@@ -53,10 +53,10 @@
                         </maecBundle:Root_Process>
                     </maecBundle:Process_Tree>
                     <maecBundle:Actions>
-                        <maecBundle:Action id="example:action-168fd262-140b-402c-b265-20957f815e69">
+                        <maecBundle:Action id="example:action-a89db65d-fe80-4b91-85ab-a793af0c5487">
                             <cybox:Name xsi:type="FileActionNameVocab-1.1">create file</cybox:Name>
                             <cybox:Associated_Objects>
-                                <cybox:Associated_Object id="example:Object-528433d2-8744-4307-8509-b3c4727b2370">
+                                <cybox:Associated_Object id="example:Object-3816c023-eea1-4cfb-a6a0-f923ab36b685">
                                     <cybox:Properties xsi:type="FileObj:FileObjectType">
                                         <FileObj:File_Name>SenpEn.exe</FileObj:File_Name>
                                         <FileObj:File_Path>C:\Document and settings\user\application data\Common Files\SenpEn.exe</FileObj:File_Path>

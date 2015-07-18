@@ -236,21 +236,27 @@ def cap2cybox(row):
     OBs = Observable()
     OBs.event = e
     OB.add(OBs)  
-
+    #print OB.to_dict()
+    
   else:
     print "New TYPE:",row[7]
 
 
 if __name__ == '__main__':
-    with codecs.open(r'sample.log', 'r',encoding="utf-16le") as f:
+    # utf-16にleが必要な場合と不必要な場合がある
+    with codecs.open(r'C:\WORK\GitHub\Python_mycode\CyboX\-K-W7X64A-192.168.1.20-2015-02-17.log', 'r',encoding="utf-16le") as f:
     #with open("sample.log",'rb') as f:
         #sr = Recoder(f, 'utf-16', 'utf-8')
         sr = f
-        xml = open("shinoBOT_ver02.xml","w")
+        xml = open(r'C:\WORK\GitHub\Python_mycode\CyboX\-K-W7X64A-192.168.1.20-2015-02-17.xml',"w")
+        #obj = open("obj.txt","w")
         for row in csv.reader(sr):
             cap2cybox(row)
 
         xml.write(OB.to_xml())
         xml.close()
+#        obj.write(OB.to_dict())
+#        obj.close()
+        
     print "done"
     #print OB.to_xml(include_namespaces = False)
